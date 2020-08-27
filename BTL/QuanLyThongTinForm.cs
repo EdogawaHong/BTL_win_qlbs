@@ -638,7 +638,13 @@ namespace BTL
                 {
                     int dgn = int.Parse(txtDonGiaNhap.Text);
                     int dgb = int.Parse(txtDonGiaBan.Text);
-                    return true;
+                    if(dgn<dgb)
+                        return true;
+                    else
+                    {
+                        MessageBox.Show("Đơn giá nhập phải nhỏ hơn đơn giá bán", "Thông báo");
+                        return false;
+                    }
                 }
                 catch
                 {

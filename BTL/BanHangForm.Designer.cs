@@ -33,6 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.grvDanhSach_SP = new System.Windows.Forms.DataGridView();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbTenNV = new System.Windows.Forms.Label();
@@ -52,12 +58,6 @@
             this.lbTongTien = new System.Windows.Forms.Label();
             this.lbTienThua = new System.Windows.Forms.Label();
             this.txtKhachTra = new System.Windows.Forms.TextBox();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grvDanhSach_SP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuong)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +117,45 @@
             this.grvDanhSach_SP.TabIndex = 4;
             this.grvDanhSach_SP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cell_Click);
             // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "ma";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.Name = "MaSach";
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "ten";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.Name = "TenSach";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "soluong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "dongia";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.Name = "DonGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "tinhtien";
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
+            // Xoa
+            // 
+            this.Xoa.HeaderText = "";
+            this.Xoa.Name = "Xoa";
+            this.Xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Xoa.Text = "Xóa";
+            this.Xoa.UseColumnTextForButtonValue = true;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -146,6 +185,8 @@
             // 
             // cbKH
             // 
+            this.cbKH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbKH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbKH.FormattingEnabled = true;
             this.cbKH.Location = new System.Drawing.Point(110, 52);
             this.cbKH.Name = "cbKH";
@@ -178,6 +219,8 @@
             // 
             // cbSach
             // 
+            this.cbSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbSach.FormattingEnabled = true;
             this.cbSach.Location = new System.Drawing.Point(84, 338);
             this.cbSach.Name = "cbSach";
@@ -285,45 +328,6 @@
             this.txtKhachTra.Name = "txtKhachTra";
             this.txtKhachTra.Size = new System.Drawing.Size(100, 20);
             this.txtKhachTra.TabIndex = 23;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "ma";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.Name = "MaSach";
-            // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "ten";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.Name = "TenSach";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "soluong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "dongia";
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.Name = "DonGia";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "tinhtien";
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
-            // Xoa
-            // 
-            this.Xoa.HeaderText = "";
-            this.Xoa.Name = "Xoa";
-            this.Xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Xoa.Text = "Xóa";
-            this.Xoa.UseColumnTextForButtonValue = true;
             // 
             // BanHangForm
             // 

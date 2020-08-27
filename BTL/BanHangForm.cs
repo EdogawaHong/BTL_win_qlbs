@@ -98,35 +98,41 @@ namespace BTL
             try
             {
                 int khachtra = int.Parse(txtKhachTra.Text);
-                if (khachtra < TongTien())
-                {
-                    MessageBox.Show("Khách trả thiếu tiền! Vui lòng nhập số tiền lớn hơn hoặc bằng số tiền phải trả!", "Thông báo");
-                }
-                else
-                {
-                    lbTienThua.Text = (khachtra - TongTien()).ToString();
-                    HoaDon hd = new HoaDon();
-                    hd.manv = MANV;
-                    hd.makh = cbKH.SelectedValue.ToString();
-                    hd.ngaymua = DateTime.Parse(dtNgayMua.Value.ToString());
-                    hd.khachtra = khachtra;
-
-                    if (hoaDon_BUL.Them_HD(hd))
+                if (sanPhams.Count != 0) {
+                    if (khachtra < TongTien())
                     {
-                        int count = hoaDon_BUL.GetTable_HD().Count;
-                        hd.mahd = hoaDon_BUL.GetTable_HD()[count - 1].mahd.ToString();
-                        txtMaHD.Text = hd.mahd;
-                        foreach (SanPham sp in sanPhams)
+                        MessageBox.Show("Khách trả thiếu tiền! Vui lòng nhập số tiền lớn hơn hoặc bằng số tiền phải trả!", "Thông báo");
+                    }
+                    else
+                    {
+                        lbTienThua.Text = (khachtra - TongTien()).ToString();
+                        HoaDon hd = new HoaDon();
+                        hd.manv = MANV;
+                        hd.makh = cbKH.SelectedValue.ToString();
+                        hd.ngaymua = DateTime.Parse(dtNgayMua.Value.ToString());
+                        hd.khachtra = khachtra;
+
+                        if (hoaDon_BUL.Them_HD(hd))
                         {
-                            if(chiTietHD_BUL.Them_CT(hd.mahd, sp.ma, sp.soluong))
+                            int count = hoaDon_BUL.GetTable_HD().Count;
+                            hd.mahd = hoaDon_BUL.GetTable_HD()[count - 1].mahd.ToString();
+                            txtMaHD.Text = hd.mahd;
+                            foreach (SanPham sp in sanPhams)
                             {
-                                sach_BUL.CapNhatSoLuong(sp.ma, sp.soluong);
+                                if (chiTietHD_BUL.Them_CT(hd.mahd, sp.ma, sp.soluong))
+                                {
+                                    sach_BUL.CapNhatSoLuong(sp.ma, sp.soluong);
+                                }
                             }
                         }
                     }
-
+                    btnXuatHoaDon.Enabled = true;
                 }
-                btnXuatHoaDon.Enabled = true;
+                else
+                {
+                    MessageBox.Show("Bạn chưa chọn sản phẩm nào để mua!", "Thông báo");
+                }
+
             }
             catch
             {

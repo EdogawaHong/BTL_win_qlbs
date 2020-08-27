@@ -128,6 +128,8 @@
             // 
             // cbSach
             // 
+            this.cbSach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbSach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbSach.FormattingEnabled = true;
             this.cbSach.Location = new System.Drawing.Point(72, 328);
             this.cbSach.Name = "cbSach";
@@ -160,6 +162,8 @@
             // 
             // cbNCC
             // 
+            this.cbNCC.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbNCC.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbNCC.FormattingEnabled = true;
             this.cbNCC.Location = new System.Drawing.Point(98, 42);
             this.cbNCC.Name = "cbNCC";

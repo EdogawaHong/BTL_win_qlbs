@@ -82,25 +82,32 @@ namespace BTL
 
         private void btnLuuPhieuNhap_Click(object sender, EventArgs e)
         {
-            PhieuNhap pn = new PhieuNhap();
-            pn.manv = MANV;
-            pn.mancc = cbNCC.SelectedValue.ToString();
-            pn.ngaynhap = DateTime.Parse(dtNgayNhap.Value.ToString());
-
-            if (phieuNhap_BUL.Them_PN(pn))
+            if (sanPhams.Count != 0)
             {
-                int count = phieuNhap_BUL.GetTable_PN().Count;
-                pn.mapn = phieuNhap_BUL.GetTable_PN()[count - 1].mapn.ToString();
-                txtMaPN.Text = pn.mapn;
-                foreach (SanPham sp in sanPhams)
+                PhieuNhap pn = new PhieuNhap();
+                pn.manv = MANV;
+                pn.mancc = cbNCC.SelectedValue.ToString();
+                pn.ngaynhap = DateTime.Parse(dtNgayNhap.Value.ToString());
+
+                if (phieuNhap_BUL.Them_PN(pn))
                 {
-                    if (chiTietPN_BUL.Them_CT(pn.mapn, sp.ma, sp.soluong))
+                    int count = phieuNhap_BUL.GetTable_PN().Count;
+                    pn.mapn = phieuNhap_BUL.GetTable_PN()[count - 1].mapn.ToString();
+                    txtMaPN.Text = pn.mapn;
+                    foreach (SanPham sp in sanPhams)
                     {
-                        sach_BUL.CapNhatSoLuongNhap(sp.ma, sp.soluong);
+                        if (chiTietPN_BUL.Them_CT(pn.mapn, sp.ma, sp.soluong))
+                        {
+                            sach_BUL.CapNhatSoLuongNhap(sp.ma, sp.soluong);
+                        }
                     }
                 }
+                btnXuatPhieu.Enabled = true;
             }
-            btnXuatPhieu.Enabled = true;
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn sách cần nhập!", "Thông báo");
+            }
         }
 
         private void btnQuayLai_Click(object sender, EventArgs e)
