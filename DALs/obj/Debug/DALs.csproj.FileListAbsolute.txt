@@ -1,0 +1,9 @@
+E:\C#\BTL\DALs\bin\Debug\DALs.dll
+E:\C#\BTL\DALs\bin\Debug\DALs.pdb
+E:\C#\BTL\DALs\bin\Debug\DTOs.dll
+E:\C#\BTL\DALs\bin\Debug\DTOs.pdb
+E:\C#\BTL\DALs\obj\Debug\DALs.csprojAssemblyReference.cache
+E:\C#\BTL\DALs\obj\Debug\DALs.csproj.CoreCompileInputs.cache
+E:\C#\BTL\DALs\obj\Debug\DALs.csproj.CopyComplete
+E:\C#\BTL\DALs\obj\Debug\DALs.dll
+E:\C#\BTL\DALs\obj\Debug\DALs.pdb

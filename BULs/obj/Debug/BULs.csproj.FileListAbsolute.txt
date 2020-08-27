@@ -1,0 +1,11 @@
+E:\C#\BTL\BULs\bin\Debug\BULs.dll
+E:\C#\BTL\BULs\bin\Debug\BULs.pdb
+E:\C#\BTL\BULs\bin\Debug\DALs.dll
+E:\C#\BTL\BULs\bin\Debug\DTOs.dll
+E:\C#\BTL\BULs\bin\Debug\DALs.pdb
+E:\C#\BTL\BULs\bin\Debug\DTOs.pdb
+E:\C#\BTL\BULs\obj\Debug\BULs.csprojAssemblyReference.cache
+E:\C#\BTL\BULs\obj\Debug\BULs.csproj.CoreCompileInputs.cache
+E:\C#\BTL\BULs\obj\Debug\BULs.csproj.CopyComplete
+E:\C#\BTL\BULs\obj\Debug\BULs.dll
+E:\C#\BTL\BULs\obj\Debug\BULs.pdb
